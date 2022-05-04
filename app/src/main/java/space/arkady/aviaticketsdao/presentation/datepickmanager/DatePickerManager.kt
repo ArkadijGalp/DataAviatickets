@@ -27,9 +27,9 @@ class DatePickerManager(private val context: Context) {
     }
 
     private fun timePickTime(textView: TextView, calendar: Calendar) {
-        val timePickerDialog = TimePickerDialog.OnTimeSetListener { _, hourOfDay, minutes ->
+        val timePickerDialog = TimePickerDialog.OnTimeSetListener { _, hourOfDay, minute ->
             calendar.set(Calendar.HOUR_OF_DAY, hourOfDay)
-            calendar.set(Calendar.MINUTE, minutes)
+            calendar.set(Calendar.MINUTE, minute)
             textView.text = calendar.time.fromDateToString()
         }
 
@@ -39,11 +39,9 @@ class DatePickerManager(private val context: Context) {
             calendar.get(Calendar.HOUR_OF_DAY),
             calendar.get(Calendar.MINUTE),
             false
-        )
+        ).show()
 
     }
-
-
 }
 
 

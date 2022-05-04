@@ -43,10 +43,10 @@ class FragmentFlightRegistration : Fragment(R.layout.fragment_flight_registratio
     private fun initViews() {
         with(binding) {
             showDepartureDate.setOnClickListener {
-                dataPicker.openDateTimePicker(inputFlightDeparture)
+                dataPicker.openDateTimePicker(showDepartureDate)
             }
             showArrivalDate.setOnClickListener {
-                dataPicker.openDateTimePicker(inputFlightDestination)
+                dataPicker.openDateTimePicker(showArrivalDate)
             }
             buttonToConfirmFlight.setOnClickListener {
                 createFlight()
